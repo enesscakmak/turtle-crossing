@@ -6,7 +6,6 @@ from car_manager import CarManager
 from scoreboard import Scoreboard
 
 level = 0
-level_increase_amount = 0
 game_is_on = True
 
 player = Player()
@@ -26,9 +25,6 @@ while game_is_on:
     cars.movement(level)
     if player.ycor() >= 280:
         level += 1
-        level_increase_amount += 1
-        if level_increase_amount > 1:
-            level -= 1
         scoreboard.update_level(level)
 
     for car in cars.car_list:
