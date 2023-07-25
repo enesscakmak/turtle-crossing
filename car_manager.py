@@ -21,7 +21,7 @@ class CarManager:
             car.color(choice(COLORS))
             car.shapesize(1, 3, 1)
             car.penup()
-            car.goto(randint(-280, 280), randint(-220, 260))
+            car.goto(randint(-280, 280), randint(-220, 240))
             car.setheading(180)
             self.car_list.append(car)
 
@@ -30,6 +30,6 @@ class CarManager:
             car.forward(STARTING_MOVE_DISTANCE + level * MOVE_INCREMENT)
             if car.xcor() <= -310:
                 car.hideturtle()
-                car.goto(320, randint(-260, 240))
+                car.goto(320, randint(-220, 240))
                 car.color(choice(COLORS))
                 car.showturtle()
