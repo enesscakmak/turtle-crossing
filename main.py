@@ -23,6 +23,9 @@ while game_is_on:
     time.sleep(0.1)
     screen.update()
     cars.movement(level)
+    if player.ycor() == 270:
+        level += 1
+        scoreboard.update_level(level)
 
     for car in cars.car_list:
         if player.distance(car) < 25:
